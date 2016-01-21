@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let rootViewController = window!.rootViewController as! UINavigationController
+        let photosViewController = rootViewController.topViewController as! PhotosViewController
+        photosViewController.store = PhotoStore()
+        
         return true
     }
 
